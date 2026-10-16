@@ -1,0 +1,11 @@
+schema_version = "1.0.0"
+id = "nk_paper_bend"
+version = "4.0.0"
+name = "NK Paper Bend"
+tagline = "Paper, pages, magazines and ribbons that bend and animate"
+maintainer = "Nihad Jihad <nsmarketingkrd@gmail.com>"
+type = "add-on"
+website = "https://wa.me/9647507600111"
+tags = ["Animation", "Geometry Nodes", "Modeling"]
+blender_version_min = "4.2.0"
+license = ["SPDX:GPL-3.0-or-later"]
