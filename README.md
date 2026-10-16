@@ -49,7 +49,7 @@ version in place and existing scenes keep working.
 
 ## Contact
 
-**Nihad Jiad Yousef** · 0750 760 0111 · [WhatsApp](https://wa.me/9647507600111) · nsmarketingkrd@gmail.com
+**Nihad Jiad Yousef** · 0750 760 0111 · [WhatsApp](https://wa.me/9647507600111) · nihadgihadyousif@gmail.com
 
 License: GPL-3.0-or-later.
 

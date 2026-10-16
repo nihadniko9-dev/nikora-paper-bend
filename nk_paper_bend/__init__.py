@@ -1,5 +1,5 @@
 # Nikora Paper Bend 4.1 — part of NIKORA (نیکۆرا) — procedural paper / card / page / magazine / ribbon motion for Blender 4.2 – 5.2+
-# Made by Nihad Jiad Yousef — 0750 760 0111 — nsmarketingkrd@gmail.com
+# Made by Nihad Jiad Yousef — 0750 760 0111 — nihadgihadyousif@gmail.com
 #
 # One Geometry Nodes engine drives every effect.  A flat sheet (local XY) is measured along a
 # bend direction; a 1-D profile of bend angles is built (spiral roll past a moving line, a
@@ -35,7 +35,7 @@ PRODUCT = "Nikora Paper Bend"
 PHONE = "07507600111"
 PHONE_PRETTY = "0750 760 0111"
 WHATSAPP = "https://wa.me/9647507600111"
-EMAIL = "nsmarketingkrd@gmail.com"
+EMAIL = "nihadgihadyousif@gmail.com"
 VERSION_STR = "4.1"
 
 NG_NAME = "NK Paper Bend"
