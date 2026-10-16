@@ -1,34 +1,56 @@
-# NK Paper Bend 4.0
+<p align="center"><img src="assets/nikora-paper-bend.png" alt="Nikora Paper Bend" width="100%"></p>
 
-Procedural paper, card, page, magazine and ribbon motion for Blender 4.2 – 5.2+.
-One Geometry Nodes engine drives every effect; you animate a single **Progress** slider.
+# Nikora Paper Bend 4.1
 
-![preview](previews/preview_1.png)
+Part of **NIKORA — نیکۆرا**, creative tools by Nihad. [Shared brand](NIKORA-BRAND.md).
+
+A Blender add-on for paper, cards, pages, magazines and ribbons that bend and animate.
+One Geometry Nodes engine drives every effect, and a single **Progress** slider animates it.
+Works in Blender 4.2 – 5.2+, Cycles and EEVEE.
 
 ## Presets
-- **Paper:** Roll, Scroll Reveal, Fold in Half, Card Peel, Sticker Peel
-- **Pages:** Page Flip, Page Fan, Magazine
-- **Ribbon & Loops:** Ribbon Candy, Ribbon Flow ∞, Twist Ribbon, Floating Paper ∞, Banner Wave ∞
+
+| Paper | Pages | Ribbon & Loops |
+|---|---|---|
+| Roll | Page Flip | Ribbon Candy |
+| Scroll Reveal | Page Fan | Ribbon Flow ∞ |
+| Fold in Half | Magazine | Twist Ribbon |
+| Card Peel | | Floating Paper ∞ |
+| Sticker Peel | | Banner Wave ∞ |
 
 ## Features
-- Smart controller Empty: put it on any edge or corner and that side moves
-- Full sheet size control (A4, Letter, Magazine, Book, Square, 4:5, 9:16, 16:9, Card, Postcard, Custom)
-- Optional front/back images, fit sheet to image, cut shape from PNG transparency
-- Magazine with real page turn, binding, per-page full-resolution images
-- Page controls: Next/Prev page keyframing, Bend, Bend at Edge, Turn Angle, Overlap
-- One-click keyframes with easing, seamless loops
+
+- **Smart controller:** put the Empty on any edge or corner and that side moves.
+- **Full sheet size:** A4, Letter, Magazine, Book, Square, 4:5, 9:16, 16:9, Card, Postcard or custom, with rounded corners.
+- **Optional images:** front and back images, fit the sheet to an image, or cut the shape from PNG transparency.
+- **Magazine:** real page turns, binding and gutter, full-resolution image per page.
+- **Page control:** Next/Prev page keyframes, Bend, Bend at Edge, Turn Angle, Overlap and spine side.
+- **Motion design:** one-click keyframes with easing, seamless loops, flutter and twist.
+
+<p align="center"><img src="previews/preview_1.png" width="49%"> <img src="previews/preview_2.png" width="49%"></p>
+<p align="center"><img src="previews/preview_5.png" width="49%"> <img src="previews/preview_6.png" width="49%"></p>
 
 ## Install
-1. Download `dist/nk_paper_bend-4.0.0.zip`.
-2. Drag it into Blender, or **Edit › Preferences › Get Extensions › Install from Disk**.
-3. Press **N** in the 3D Viewport and open the **NK Bend** tab.
 
-## دامەزراندن (کوردی)
-1. فایلی `dist/nk_paper_bend-4.0.0.zip` دابگرە.
-2. ڕایبکێشە ناو Blender، یان لە Edit › Preferences › Get Extensions › Install from Disk هەڵیبژێرە.
-3. لە ڤیوپۆرت N دابگرە و بچۆ تابی **NK Bend**.
+1. Download [`dist/nikora_paper_bend-4.1.0.zip`](dist/nikora_paper_bend-4.1.0.zip).
+2. Drag it into Blender, or use **Edit › Preferences › Get Extensions › Install from Disk**.
+3. Press **N** in the 3D Viewport and open the **Nikora** tab.
 
-## Author
-**Nihad Jihad** · 0750 760 0111 · [WhatsApp](https://wa.me/9647507600111) · nsmarketingkrd@gmail.com
+Upgrading from NK Paper Bend 4.0: the extension id stays `nk_paper_bend`, so it replaces the old
+version in place and existing scenes keep working.
 
-License: GPL-3.0-or-later
+## دامەزراندن
+
+١. فایلی `dist/nikora_paper_bend-4.1.0.zip` دابگرە.
+٢. ڕایبکێشە ناو Blender، یان لە Edit › Preferences › Get Extensions › Install from Disk هەڵیبژێرە.
+٣. لە ڤیوپۆرت **N** دابگرە و بچۆ تابی **Nikora**.
+
+پریسێتێک هەڵبژێرە، دواتر تەنها **Progress** لە 0 بۆ 1 ئەنیمەیت بکە. Empty ـەکە بخەرە سەر هەر لایەک یان گۆشەیەک، ئەو لایە دەجوڵێت.
+
+## Contact
+
+**Nihad Jiad Yousef** · 0750 760 0111 · [WhatsApp](https://wa.me/9647507600111) · nsmarketingkrd@gmail.com
+
+License: GPL-3.0-or-later.
+
+<p align="center"><img src="assets/nikora.png" alt="NIKORA" width="420"></p>

@@ -1,5 +1,5 @@
-# NK Paper Bend 4.0 — procedural paper / card / page / magazine / ribbon motion for Blender 4.2 – 5.2+
-# Made by Nihad Jihad — 0750 760 0111 — nsmarketingkrd@gmail.com
+# Nikora Paper Bend 4.1 — part of NIKORA (نیکۆرا) — procedural paper / card / page / magazine / ribbon motion for Blender 4.2 – 5.2+
+# Made by Nihad Jiad Yousef — 0750 760 0111 — nsmarketingkrd@gmail.com
 #
 # One Geometry Nodes engine drives every effect.  A flat sheet (local XY) is measured along a
 # bend direction; a 1-D profile of bend angles is built (spiral roll past a moving line, a
@@ -10,11 +10,11 @@
 # the side that moves.
 
 bl_info = {
-    "name": "NK Paper Bend",
-    "author": "Nihad Jihad",
-    "version": (4, 0, 0),
+    "name": "Nikora Paper Bend",
+    "author": "Nihad Jiad Yousef",
+    "version": (4, 1, 0),
     "blender": (4, 2, 0),
-    "location": "3D Viewport > Sidebar (N) > NK Bend",
+    "location": "3D Viewport > Sidebar (N) > Nikora",
     "description": "Procedural roll, peel, fold, page flip, magazine, ribbons and loops",
     "category": "Object",
 }
@@ -29,12 +29,14 @@ from bpy.props import (
     StringProperty, CollectionProperty,
 )
 
-AUTHOR = "Nihad Jihad"
+AUTHOR = "Nihad Jiad Yousef"
+BRAND = "NIKORA"
+PRODUCT = "Nikora Paper Bend"
 PHONE = "07507600111"
 PHONE_PRETTY = "0750 760 0111"
 WHATSAPP = "https://wa.me/9647507600111"
 EMAIL = "nsmarketingkrd@gmail.com"
-VERSION_STR = "4.0"
+VERSION_STR = "4.1"
 
 NG_NAME = "NK Paper Bend"
 NG_VERSION = 5
@@ -1109,7 +1111,7 @@ def apply_bend(obj, preset_key, set_materials=True):
             try:
                 set_input(mod, it.identifier, it.default_value)
             except Exception as e:
-                print("NK Bend: could not reset", it.name, e)
+                print("Nikora Paper Bend: could not reset", it.name, e)
     for name, val in preset["inputs"].items():
         set_input(mod, ids[name], val)
     set_input(mod, ids["Progress"], 0.25 if preset.get("loop") else 0.6)
@@ -1270,7 +1272,7 @@ class NKBEND_OT_keyframe(bpy.types.Operator):
         obj = _bend_owner(context)
         mod = get_bend_mod(obj)
         if mod is None:
-            self.report({"ERROR"}, "Select an NK Bend sheet")
+            self.report({"ERROR"}, "Select a Nikora Paper Bend sheet")
             return {"CANCELLED"}
         st = context.scene.nk_bend
         ident = _socket_ids(mod.node_group)["Progress"]
@@ -1355,7 +1357,7 @@ class NKBEND_OT_load_image(bpy.types.Operator):
                     _SHEET_LOCK[0] = False
                 rebuild_sheet(obj)
             elif self.cut and not sp.generated:
-                self.report({"WARNING"}, "Cut from transparency works on sheets made by NK Bend")
+                self.report({"WARNING"}, "Cut from transparency works on sheets made by Nikora Paper Bend")
         else:
             sp.back_image = img
         apply_images(obj)
@@ -1398,7 +1400,7 @@ class NKBEND_OT_load_pages(bpy.types.Operator):
         obj = _bend_owner(context)
         mod = get_bend_mod(obj)
         if mod is None:
-            self.report({"ERROR"}, "Select an NK Bend sheet first")
+            self.report({"ERROR"}, "Select a Nikora Paper Bend sheet first")
             return {"CANCELLED"}
         names = sorted([f.name for f in self.files if f.name], key=_natural_key)
         imgs = []
@@ -1481,7 +1483,7 @@ class NKBEND_OT_contact(bpy.types.Operator):
         elif self.action == "WHATSAPP":
             bpy.ops.wm.url_open(url=WHATSAPP)
         else:
-            bpy.ops.wm.url_open(url=f"mailto:{EMAIL}?subject=NK%20Paper%20Bend")
+            bpy.ops.wm.url_open(url=f"mailto:{EMAIL}?subject=Nikora%20Paper%20Bend")
         return {"FINISHED"}
 
 
@@ -1524,7 +1526,7 @@ class NKBEND_OT_page_step(bpy.types.Operator):
             return {"CANCELLED"}
         ids = _socket_ids(mod.node_group)
         if "Page" not in ids:
-            self.report({"ERROR"}, "Recreate this sheet with the latest NK Bend to use pages")
+            self.report({"ERROR"}, "Recreate this sheet with the latest Nikora Paper Bend to use pages")
             return {"CANCELLED"}
         st, scene = context.scene.nk_bend, context.scene
         set_input(mod, ids["Use Page Number"], True)
@@ -1621,10 +1623,10 @@ def _section(layout, idname, title, icon="NONE", closed=False):
 
 
 class NKBEND_PT_main(bpy.types.Panel):
-    bl_label = "NK Paper Bend"
+    bl_label = "Nikora Paper Bend"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
-    bl_category = "NK Bend"
+    bl_category = "Nikora"
 
     def draw(self, context):
         layout = self.layout
@@ -1777,7 +1779,8 @@ class NKBEND_PT_main(bpy.types.Panel):
         body = _section(layout, "nk_about", "About", "INFO", closed=True)
         if body:
             col = body.column(align=True)
-            col.label(text=f"NK Paper Bend {VERSION_STR}")
+            col.label(text=f"{PRODUCT} {VERSION_STR}")
+            col.label(text=f"Part of {BRAND} — creative tools by Nihad")
             col.label(text=f"Made by {AUTHOR}", icon="USER")
             r = body.row(align=True)
             r.operator("nk_bend.contact", text=PHONE_PRETTY, icon="COPYDOWN").action = "PHONE"
@@ -1789,7 +1792,7 @@ class NKBEND_PT_params(bpy.types.Panel):
     bl_label = "Parameters"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
-    bl_category = "NK Bend"
+    bl_category = "Nikora"
     bl_parent_id = "NKBEND_PT_main"
     bl_options = {"DEFAULT_CLOSED"}
 

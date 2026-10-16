@@ -1,0 +1,20 @@
+{
+  "brand": "NIKORA",
+  "kurdish_name": "نیکۆرا",
+  "owner": "Nihad Jiad Yousef",
+  "products": {
+    "sub": "Nikora Sub",
+    "tracker": "Nikora Tracker",
+    "easing": "Nikora Easing Lab",
+    "paper_bend": "Nikora Paper Bend"
+  },
+  "colors": {
+    "background": "#111510",
+    "surface": "#1B2119",
+    "field": "#252D22",
+    "text": "#F1F4EB",
+    "muted": "#A2AE99",
+    "accent": "#BBD755"
+  },
+  "font": "Segoe UI"
+}

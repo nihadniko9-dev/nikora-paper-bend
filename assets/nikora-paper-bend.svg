@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+<title id="title">Nikora Paper Bend</title><desc id="desc">NIKORA Blender add-on for paper, pages, magazines and ribbons that bend and animate.</desc>
+<defs>
+  <clipPath id="c"><rect width="1200" height="400" rx="24"/></clipPath>
+  <linearGradient id="front" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1F4EB"/><stop offset="1" stop-color="#C9D1BE"/></linearGradient>
+  <linearGradient id="curl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8FA83A"/><stop offset=".55" stop-color="#BBD755"/><stop offset="1" stop-color="#E3F0A6"/></linearGradient>
+  <linearGradient id="shade" x1="1" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#111510" stop-opacity=".55"/><stop offset="1" stop-color="#111510" stop-opacity="0"/></linearGradient>
+</defs>
+<g clip-path="url(#c)">
+  <rect width="1200" height="400" fill="#111510"/>
+  <path d="M900 0L650 400M1060 0L810 400M1220 0L970 400" stroke="#1B2119" stroke-width="64"/>
+  <rect x="64" y="70" width="48" height="5" rx="2" fill="#BBD755"/>
+  <text x="64" y="118" fill="#BBD755" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="600" letter-spacing="8">NIKORA</text>
+  <text x="60" y="206" fill="#F1F4EB" font-family="Segoe UI,Arial,sans-serif" font-size="78" font-weight="700" letter-spacing="6">PAPER BEND</text>
+  <text x="66" y="254" fill="#A2AE99" font-family="Segoe UI,Arial,sans-serif" font-size="18" letter-spacing="3">ROLL / PEEL / PAGES / MAGAZINE / RIBBONS</text>
+  <rect x="64" y="300" width="214" height="40" rx="20" fill="#1B2119" stroke="#252D22" stroke-width="2"/>
+  <text x="171" y="326" text-anchor="middle" fill="#F1F4EB" font-family="Segoe UI,Arial,sans-serif" font-size="15" letter-spacing="2">BLENDER ADD-ON · 4.1</text>
+  <text x="300" y="326" fill="#A2AE99" font-family="Segoe UI,Arial,sans-serif" font-size="15" letter-spacing="2">CREATIVE TOOLS BY NIHAD</text>
+  <!-- curling sheet -->
+  <g transform="translate(790 70) rotate(-8 160 130)">
+    <rect x="18" y="22" width="300" height="230" rx="8" fill="#000" opacity=".35"/>
+    <path d="M0 0H300V150Q300 230 220 230H0Z" fill="url(#front)"/>
+    <rect x="28" y="30" width="120" height="10" rx="5" fill="#BBD755"/>
+    <rect x="28" y="56" width="200" height="6" rx="3" fill="#A2AE99"/>
+    <rect x="28" y="72" width="170" height="6" rx="3" fill="#A2AE99"/>
+    <rect x="28" y="88" width="185" height="6" rx="3" fill="#A2AE99"/>
+    <rect x="28" y="116" width="110" height="80" rx="6" fill="#252D22"/>
+    <path d="M300 150Q300 230 220 230L300 150Z" fill="url(#shade)"/>
+    <path d="M300 150Q262 168 248 196Q236 222 220 230Q262 214 300 150Z" fill="url(#curl)"/>
+  </g>
+</g>
+</svg>
